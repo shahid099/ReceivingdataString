@@ -16,7 +16,7 @@ router.post('/', async (req, res)=> {
                 customerData: textValue,
             })
             const savedData = await data.save();
-            console.log(savedData)
+            // console.log(savedData)
             res.send({ savedData })
     } catch (error) {
         console.error(error.message);

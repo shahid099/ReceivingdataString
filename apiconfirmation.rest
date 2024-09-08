@@ -1,0 +1,24 @@
+# Create new Users
+POST http://localhost:5000/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Muhammad Shahid",
+    "email": "shahidking@gmail.com",
+    "password": "shahidking"
+}
+
+###
+# Login if user Available 
+POST http://localhost:5000/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "shahidking@gmail.com",
+    "password": "shahidking"
+}
+
+###
+# Get All the Logedin users
+GET http://localhost:5000/users/barcodeusers HTTP/1.1
+# content-type: application/json

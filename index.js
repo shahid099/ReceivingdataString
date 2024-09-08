@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 
 // Importing Routes 
 import postdata from './routes/postdata.js';
+import signuplogin from './routes/signuplogin.js';
 
 const app = express();
 const  PORT = 5000 || process.env.PORT;
@@ -13,6 +14,7 @@ dotenv.config();
 
 app.use(express.json());
 app.use('/postdata', postdata);
+app.use('/users', signuplogin);
 
 try {
     mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
