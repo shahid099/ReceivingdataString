@@ -24,7 +24,7 @@ router.post('/signup', async (req, res)=> {
 
         const savedUser =  await user.save();
         console.log("Successfully Saved user", savedUser);
-        res.send({savedUser});
+        res.status(200).send({savedUser, message: "Successfully Saved user"});
     } catch (error) {
         console.error(error.message);
         res.status(500).send({ error: "Internal Server error." });
@@ -43,7 +43,7 @@ router.post("/login", async (req, res)=> {
             }
         // If user Exists then
         if(password == user.password) {
-            res.send("User login Successfully.")
+            res.status(200).send({ user, message:  " User login Successfully." });
         } else {
             return res.status(401).send({ success, error: "Please try to login with correct credentials" });
         }

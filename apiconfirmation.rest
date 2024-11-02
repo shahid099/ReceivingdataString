@@ -3,9 +3,9 @@ POST http://localhost:5000/users/signup HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Muhammad Shahid",
-    "email": "shahidking@gmail.com",
-    "password": "shahidking"
+    "name": "Muhammd Shahid",
+    "email": "shahiking@gmail.com",
+    "password": "shaidking"
 }
 
 ###
@@ -14,8 +14,8 @@ POST http://localhost:5000/users/login HTTP/1.1
 content-type: application/json
 
 {
-    "email": "shahidking@gmail.com",
-    "password": "shahidking"
+    "email": "shahiking@gmail.com",
+    "password": "shaidking"
 }
 
 ###
